@@ -8,13 +8,14 @@ public class LoadWorld : MonoBehaviour {
 
     public GameObject regionPrefab;
 
-    private void Start()
+    void load()
     {
 
         for (int i = 0; i < regionCount; ++i)
         {
             GameObject region = Instantiate(regionPrefab);
             region.transform.parent = this.gameObject.transform;
+            region.GetComponent<LoadRegion>().load();
         }
     }
 }

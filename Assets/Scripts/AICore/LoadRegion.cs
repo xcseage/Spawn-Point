@@ -10,7 +10,7 @@ public class LoadRegion : MonoBehaviour
     public GameObject cityPrefab;
     public GameObject villagePrefab;
 
-    void Start()
+    public void load()
     {
 
         GameObject city = Instantiate(cityPrefab);
